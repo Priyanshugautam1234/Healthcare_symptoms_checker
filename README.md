@@ -13,6 +13,10 @@ A premium, AI-powered web application that helps users identify potential medica
 - npm
 - A Google Gemini API Key
 
+## 🎥 Demo
+![Demo Video](assets/demo.webp)
+*If the video doesn't play, [download it here](assets/demo.webp).*
+
 ## Setup & Run
 
 You need to run the backend and frontend in **two separate terminals**.

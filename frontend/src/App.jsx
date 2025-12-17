@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { jsPDF } from 'jspdf';
@@ -10,6 +11,13 @@ function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [isListening, setIsListening] = useState(false);
+  const resultRef = React.useRef(null);
+
+  useEffect(() => {
+    if (result && resultRef.current) {
+      resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [result]);
 
   const startListening = () => {
     if (!('webkitSpeechRecognition' in window)) {
@@ -242,6 +250,7 @@ function App() {
 
           {result && (
             <motion.div
+              ref={resultRef}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
