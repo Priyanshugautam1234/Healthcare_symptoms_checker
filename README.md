@@ -57,6 +57,7 @@ You need to run the backend and frontend in **two separate terminals**.
 - Enter your symptoms in the text box (e.g., "I have a headache and light sensitivity").
 - Click **Analyze Symptoms**.
 - View the AI-generated conditions and recommendations.
+- Also you can download that report.
 
 
 ## Troubleshooting
